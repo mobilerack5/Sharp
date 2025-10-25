@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktív Képélesítő</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Interaktív Képélesítő</h1>
+    
+    <div class="controls">
+        <label for="imageLoader">Tölts fel egy képet:</label>
+        <input type="file" id="imageLoader" name="imageLoader"/>
+    </div>
+
+    <div class="filters">
+        <div class="filter-group">
+            <label for="contrast">Kontraszt (%):</label>
+            <input type="range" id="contrast" min="0" max="300" value="100">
+        </div>
+        <div class="filter-group">
+            <label for="sharpen">Élesítés (%):</label>
+            <input type="range" id="saturate" min="0" max="300" value="100">
+        </div>
+        <div class="filter-group">
+            <label for="blur">Elmosás / Zajszűrés (px):</label>
+            <input type="range" id="blur" min="0" max="10" value="0" step="0.1">
+        </div>
+         <div class="filter-group">
+            <label for="brightness">Fényerő (%):</label>
+            <input type="range" id="brightness" min="0" max="300" value="100">
+        </div>
+    </div>
+
+    <canvas id="imageCanvas"></canvas>
+
+    <button id="downloadButton">Kép letöltése</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
